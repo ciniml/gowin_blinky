@@ -2,7 +2,7 @@
 
 BITSTREAM := impl/pnr/blinky.fs
 SRCS := $(wildcard serv/rtl/*.v) $(wildcard serv/rtl/*.sv) $(wildcard src/*.sv) $(wildcard rtl/*.cst) $(wildcard rtl/*.sdc) synthesize.cfg
-DEVICE ?= GW1N-1
+DEVICE ?= GW1N-4
 
 all: synthesis
 
