@@ -1,6 +1,8 @@
 module blinky_top (
     input  wire resetn,
-    output wire [2:0] gpio
+    output wire [2:0] gpio,
+    input wire fpga_rx,
+    output wire fpga_tx
 );
     logic clk;
     OSCH #(
@@ -10,6 +12,8 @@ module blinky_top (
     );
 
     localparam int COUNTER_TOP = 32'd2_000_000 - 32'd1;
+    
+    assign fpga_tx = fpga_rx;
 
     logic [2:0] gpio_out;
     assign gpio = ~gpio_out[2:0];

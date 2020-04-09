@@ -6,6 +6,7 @@ set_option -prj_name blinky
 add_file -hdl [file normalize src/blinky.sv]
 add_file -cst [file normalize src/blinky.cst]
 add_file -sdc [file normalize src/blinky.sdc]
+add_file -cfg [file normalize device.cfg]
 
 run_synthesis -opt [file normalize synthesize.cfg]
 run_pnr -timing
